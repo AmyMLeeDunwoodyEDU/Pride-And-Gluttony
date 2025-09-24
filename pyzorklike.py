@@ -4,7 +4,7 @@
 #pick a random day (1-10) to have a checkpoint village where you can buy better gear
 #have a save point system for every checkpoint village so its not completely rougelike lmfao
 #more difficult monsters to make up for the user getting better gear
-#bosses.... heheheha
+#bosses.... heheha
 
 #extra:
 #adding crit to every monster would be reaallly funny and evil but i would have to write 2 variations of the same move like i did with the player and i don't think ill be able to make that reasonably happen in a time crunch scenario like right now
