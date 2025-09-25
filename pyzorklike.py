@@ -60,7 +60,7 @@ AmountofPotionsB = []
 AmountofAntidotesB = []
 AlimentList = []
 backpack = []
-deaths = 1
+deaths = 0
 
 def clear_Screen():
       os.system(
