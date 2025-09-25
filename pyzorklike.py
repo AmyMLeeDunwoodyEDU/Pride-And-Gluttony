@@ -1,3 +1,4 @@
+#this program was created on 9/10/2025 and is ongoing in development :3
 #creator to do for this program:
 
 #more important:
@@ -377,10 +378,15 @@ def guideOfGame():
     print("[Enter to Clear or Proceed]: Press the Enter key to wipe the command line clean\n")
     
     print("[Directional Prompt Shortcuts that can be used]:")
-    print("N, for North")
-    print("E, for East")
-    print("S, for South")
-    print("W, for West\n")
+    print("North: N, Up")
+    print("East: E, Right")
+    print("South: S, Down")
+    print("West: W, Left\n")
+    
+    print("[Specific Store Direction Prompts]:")
+    print("Blacksmith: BS")
+    print("Potions Store: PS")
+    print("General Store: GS")
     
     print("[Store Prompt Shortcuts that can be used]:\n")
     if 'Blacksmith' in StoreVisitedList:
@@ -391,7 +397,6 @@ def guideOfGame():
     
     if 'Blacksmith' not in StoreVisitedList:
         print("* You haven't gone to the Blacksmith yet. Go into the Smithery to unlock more information.")
-    
     
     if 'Potions Store' in StoreVisitedList:
         print("\n[For Starter Potions Shop]:")
@@ -443,17 +448,17 @@ def arc1():
     while True:
         print("Currently, you are standing at the center of this small village with a very important folded piece of paper you can unfold to read. \nThere is a sign post. It says: To the north, there is a Blacksmith. \nTo the west, there is a small Potions Store. \nTo the east, there is a small General Store. \nTo the south lies the entrance and exit of the village.\n")
         GoToLocation = input("So, what do you want to do Adventurer? (Pick from the shops you want to go to, or the direction they are listed as, or read folded paper)\n")
-        if GoToLocation.casefold() == "North".casefold() or GoToLocation.casefold() == "N".casefold() or GoToLocation.casefold() == "Blacksmith".casefold() or GoToLocation.casefold() == "BS".casefold():
+        if GoToLocation.casefold() == "North".casefold() or GoToLocation.casefold() == "N".casefold() or GoToLocation.casefold() == "Blacksmith".casefold() or GoToLocation.casefold() == "BS".casefold() or GoToLocation.casefold() == "Up".casefold():
             GoNorth()
             StoreVisitedList.remove("None")
             StoreVisitedList.append("Blacksmith")
-        if GoToLocation.casefold() == "East".casefold() or GoToLocation.casefold() == "E".casefold() or GoToLocation.casefold() == "General Store".casefold() or GoToLocation.casefold() == "GS".casefold():
+        if GoToLocation.casefold() == "East".casefold() or GoToLocation.casefold() == "E".casefold() or GoToLocation.casefold() == "General Store".casefold() or GoToLocation.casefold() == "GS".casefold or GoToLocation.casefold() == "Right".casefold()():
              GoEast()
              StoreVisitedList.remove("None")
              StoreVisitedList.append("General Store")
         if GoToLocation.casefold() == "South".casefold() or GoToLocation.casefold() == "S".casefold() or GoToLocation.casefold() == "Down".casefold():
              GoSouth()
-        if GoToLocation.casefold() == "West".casefold() or GoToLocation.casefold() == "W".casefold() or GoToLocation.casefold() == "Potions Store".casefold() or GoToLocation.casefold() == "PS".casefold():
+        if GoToLocation.casefold() == "West".casefold() or GoToLocation.casefold() == "W".casefold() or GoToLocation.casefold() == "Potions Store".casefold() or GoToLocation.casefold() == "PS".casefold() or GoToLocation.casefold() == "Left".casefold():
              GoWest()
              StoreVisitedList.remove("None")
              StoreVisitedList.append("Potions Store")
