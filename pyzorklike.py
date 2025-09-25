@@ -1,13 +1,25 @@
 #more important:
+#have Monster HP be only randomized once per battle, not once per turn lmfao
 #add in an invalid response function if the responses from the user were different than the options given.
-#add inventory space, where you can hold only 5 items without a backpack, and 10 items with the backpack.
-#pick a random day (1-10) to have a checkpoint village where you can buy better gear
-#have a save point system for every checkpoint village so its not completely rougelike lmfao
+#add inventory space, where player can hold only 5 items without a backpack, and 10 items with the backpack.
+#add in emotion levels (if the player wins more battles, player gets a higher chance of hitting critical attacks, if the player is felled during battle but their party lives, have a lower chance of landing critical attacks)
+#pick a random day (1-10) to have a checkpoint village where player can buy better gear
+#have a save system for every checkpoint village so its not completely rougelike lmfao
 #more difficult monsters to make up for the user getting better gear
+#add in potential dungeon crawling
 #bosses.... heheheha
+#add in a magic system where only specific races can harness it
+#make it so it is heavily dependant on emotions and energy
+#make some magic, if its powerful, requires a sacrifice from the user, like HP
 
 #extra:
 #adding crit to every monster would be reaallly funny and evil but i would have to write 2 variations of the same move like i did with the player and i don't think ill be able to make that reasonably happen in a time crunch scenario like right now
+#adding in more interactions where the player can have a chance to encounter new people, do their first quest, to have them become the player's party member, the maximum you can have is 4 party members including the player
+#randomize their names and physical features but only once lmfao
+#have it so player can give gear to these new party members
+#have the party members have 4 builds but randomize these builds only once
+#the 4 builds will be: damage dealer (physical attack varient), damage dealer (magic attack varient), tank, healing
+#have randomized stories for each of the party members, at least 10 varients, but have them all have some relevance with each other
 
 import os
 
@@ -37,14 +49,14 @@ guardingYesOrNo = ['No']
 StoreVisited = []
 StoreVisitedList = ['None']
 MonsterEncountered = []
-MonstersEncounteredList = ['Goblin', 'Orc', 'Baby Dragon']
+MonstersEncounteredList = []
 MonsterSpeed = []
 MonsterHP = []
 AmountofPotionsB = []
 AmountofAntidotesB = []
 AlimentList = []
 backpack = []
-deaths = 1
+deaths = 0
 
 def clear_Screen():
       os.system(
@@ -311,7 +323,7 @@ def guideOfGame():
         time.sleep(3)
     
     if 'Goblin' not in MonstersEncounteredList:
-        print("You must defeat a Goblin to unlock this information.")
+        print("* You must defeat a Goblin to unlock this information.")
         time.sleep(1)
     
     if 'Orc' in MonstersEncounteredList:
@@ -324,7 +336,7 @@ def guideOfGame():
         time.sleep(3)
     
     if 'Orc' not in MonstersEncounteredList:
-        print("You must defeat an Orc to unlock this information.")
+        print("* You must defeat an Orc to unlock this information.")
         time.sleep(1)
     
     if 'Baby Dragon' in MonstersEncounteredList:
@@ -339,7 +351,7 @@ def guideOfGame():
         time.sleep(5)
     
     if 'Baby Dragon' not in MonstersEncounteredList:
-        print("You must defeat a Baby Dragon to unlock this information.")
+        print("* You must defeat a Baby Dragon to unlock this information.")
         time.sleep(1)
 
     print("\n[ALIMENTS]:")
@@ -421,7 +433,7 @@ def guideOfGame():
 def arc1():
     global StoreVisitedList
     while True:
-        print("Currently, you are standing at the center of this small village with a folded piece of paper you can unfold to read. \nTo the north, there is a blacksmith. \nTo the west, there is a small Potions Store. \nTo the east, there is a small General Store. \nTo the south lies the entrance and exit of the village.\n")
+        print("Currently, you are standing at the center of this small village with a very important folded piece of paper you can unfold to read. \nTo the north, there is a blacksmith. \nTo the west, there is a small Potions Store. \nTo the east, there is a small General Store. \nTo the south lies the entrance and exit of the village.\n")
         GoToLocation = input("So, what do you want to do Adventurer? (Pick from N,E,S,W or read folded paper)\n")
         if GoToLocation.casefold() == "North".casefold() or GoToLocation.casefold() == "N".casefold():
             GoNorth()
