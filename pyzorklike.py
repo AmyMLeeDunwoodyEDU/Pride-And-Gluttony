@@ -4,6 +4,7 @@
 #have Monster HP be only randomized once per battle, not once per turn lmfao
 #add in an invalid response function if the responses from the user were different than the options given.
 #add inventory space, where player can hold only 5 items without a backpack, and 10 items with the backpack.
+#make it so you can open up the guide in shops as well.
 #add in emotion levels (if the player wins more battles, player gets a higher chance of hitting critical attacks, if the player is felled during battle but their party lives, have a lower chance of landing critical attacks)
 #pick a random day (1-10) to have a checkpoint village where player can buy better gear
 #have a save system for every checkpoint village so its not completely rougelike lmfao
@@ -422,6 +423,9 @@ def guideOfGame():
     if deaths == 0:
         print("* You only know the basics so far. Die once or make it to the next village to unlock information about battle prompt shortcuts.")
     
+    print("[The Available Prompt Shortcuts for opening the Guide]:")
+    print("Unfold, Read, Open Paper, U, R, and OP.")
+    
     print("You can only unfold this piece of paper in a village.")
     
     time.sleep(1)
@@ -433,28 +437,33 @@ def guideOfGame():
         arc1()
    
 def arc1():
+    import time
     global StoreVisitedList
+    
     while True:
-        print("Currently, you are standing at the center of this small village with a very important folded piece of paper you can unfold to read. \nTo the north, there is a blacksmith. \nTo the west, there is a small Potions Store. \nTo the east, there is a small General Store. \nTo the south lies the entrance and exit of the village.\n")
-        GoToLocation = input("So, what do you want to do Adventurer? (Pick from N,E,S,W or read folded paper)\n")
-        if GoToLocation.casefold() == "North".casefold() or GoToLocation.casefold() == "N".casefold():
+        print("Currently, you are standing at the center of this small village with a very important folded piece of paper you can unfold to read. \nThere is a sign post. It says: To the north, there is a Blacksmith. \nTo the west, there is a small Potions Store. \nTo the east, there is a small General Store. \nTo the south lies the entrance and exit of the village.\n")
+        GoToLocation = input("So, what do you want to do Adventurer? (Pick from the shops you want to go to, or the direction they are listed as, or read folded paper)\n")
+        if GoToLocation.casefold() == "North".casefold() or GoToLocation.casefold() == "N".casefold() or GoToLocation.casefold() == "Blacksmith".casefold() or GoToLocation.casefold() == "BS".casefold():
             GoNorth()
             StoreVisitedList.remove("None")
             StoreVisitedList.append("Blacksmith")
-        if GoToLocation.casefold() == "East".casefold() or GoToLocation.casefold() == "E".casefold():
+        if GoToLocation.casefold() == "East".casefold() or GoToLocation.casefold() == "E".casefold() or GoToLocation.casefold() == "General Store".casefold() or GoToLocation.casefold() == "GS".casefold():
              GoEast()
              StoreVisitedList.remove("None")
              StoreVisitedList.append("General Store")
-        if GoToLocation.casefold() == "South".casefold() or GoToLocation.casefold() == "S".casefold():
+        if GoToLocation.casefold() == "South".casefold() or GoToLocation.casefold() == "S".casefold() or GoToLocation.casefold() == "Down".casefold():
              GoSouth()
-        if GoToLocation.casefold() == "West".casefold() or GoToLocation.casefold() == "W".casefold():
+        if GoToLocation.casefold() == "West".casefold() or GoToLocation.casefold() == "W".casefold() or GoToLocation.casefold() == "Potions Store".casefold() or GoToLocation.casefold() == "PS".casefold():
              GoWest()
              StoreVisitedList.remove("None")
              StoreVisitedList.append("Potions Store")
-        if GoToLocation.casefold() == "Unfold".casefold() or GoToLocation.casefold() == "Read".casefold():
+        if GoToLocation.casefold() == "Unfold".casefold() or GoToLocation.casefold() == "Read".casefold() or GoToLocation.casefold() == "Open Paper".casefold() or GoToLocation.casefold() == "OP".casefold() or GoToLocation.casefold() == "R".casefold() or GoToLocation.casefold() == "U".casefold():
             guideOfGame()
         else:
-            print("The response you gave was invalid. Try typing one of the directions given to you to continue.")
+            invalidResponse = input("The response you gave was invalid. Try inputting either the directions given, the shop name, or read the given piece of paper to you.")
+            if invalidResponse == "":
+                time.sleep(2)
+                clear_Screen
 
 def StayInShop():
     if StoreVisited == "North":
