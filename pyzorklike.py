@@ -115,7 +115,7 @@ def newGenstart_game():
     
     time.sleep(3)
     
-    print("\nPride and Gluttony is an experimental turn-based battle monster hunter beat-em-up rage randomizer text input game that is a passion and assigned project.")
+    print("\nPride and Gluttony is an experimental turn-based fantasy battle rage randomizer text input game that is a passion and assigned project.")
     
     time.sleep(4)
     
