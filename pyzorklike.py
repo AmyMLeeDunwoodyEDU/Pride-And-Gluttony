@@ -464,6 +464,8 @@ def arc1():
             if invalidResponse == "":
                 time.sleep(2)
                 clear_Screen
+                time.sleep(1)
+                arc1()
 
 def StayInShop():
     if StoreVisited == "North":
@@ -1014,7 +1016,7 @@ def GoblinTurn():
     guardingFromAttacksRange = range(5,10)
     guardingFromAttack = random.choice(guardingFromAttacksRange)
 
-    goblinAttack1 = range(3,10)
+    goblinAttack1 = range(3,10) #Bludgeon Base Values
     randomizedGoblinAttack1 = random.choice(goblinAttack1)
 
     chanceToWaitGoblin = (1,100)
@@ -1158,7 +1160,7 @@ def OrcTurn():
     listOfOrcAttacks = ['Bludgeon', 'Smackdown']
     randomizedOrcAttack = random.choice(listOfOrcAttacks)
 
-    orcAttack1 = range(4,20)
+    orcAttack1 = range(4,20) #Bludgeon Base Values, added twice to make Smackdown
     randomizedOrcAttack1 = random.choice(orcAttack1)
 
     chanceToWaitOrc = (1,100)
@@ -1419,13 +1421,13 @@ def BabyDragonTurn():
     listOfBDAttacks = ['Consecutive Scratching', 'Spit Fire', 'Bite', 'Burning Bite']
     randomizedBDAttack = random.choice(listOfBDAttacks)
 
-    BDAttack1 = range(2,8) #Consecutive Scratching
+    BDAttack1 = range(2,8) #Consecutive Scratching Base Values, added 3 times to complete the entire skill, so the real base value is 6-24DMG
     randomizedBDAttack1 = random.choice(BDAttack1)
-    BDAttack3 = range(9,10) #Spit Fire
+    BDAttack3 = range(9,10) #Spit Fire Base Values
     randomizedBDAttack3 = random.choice(BDAttack3)
-    BDAttack5 = range(10,20) #Bite
+    BDAttack5 = range(10,20) #Bite Base Values
     randomizedBDAttack5 = random.choice(BDAttack5)
-    BDAttack7 = range(15,25) #Burning Bite
+    BDAttack7 = range(15,25) #Burning Bite Base Values
     randomizedBDAttack7 = random.choice(BDAttack7)
 
     chanceToWaitBD = (1,100)
