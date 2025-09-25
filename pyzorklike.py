@@ -1,3 +1,5 @@
+#creator to do for this program:
+
 #more important:
 #have Monster HP be only randomized once per battle, not once per turn lmfao
 #add in an invalid response function if the responses from the user were different than the options given.
@@ -6,7 +8,7 @@
 #pick a random day (1-10) to have a checkpoint village where player can buy better gear
 #have a save system for every checkpoint village so its not completely rougelike lmfao
 #more difficult monsters to make up for the user getting better gear
-#add in potential dungeon crawling
+#add in potential and forced dungeon crawling, the player would have more action and movement choices, with better rewards as well but its going to be very difficult
 #bosses.... heheheha
 #add in a magic system where only specific races can harness it
 #make it so it is heavily dependant on emotions and energy
@@ -56,7 +58,7 @@ AmountofPotionsB = []
 AmountofAntidotesB = []
 AlimentList = []
 backpack = []
-deaths = 0
+deaths = 1
 
 def clear_Screen():
       os.system(
@@ -451,6 +453,8 @@ def arc1():
              StoreVisitedList.append("Potions Store")
         if GoToLocation.casefold() == "Unfold".casefold() or GoToLocation.casefold() == "Read".casefold():
             guideOfGame()
+        else:
+            print("The response you gave was invalid. Try typing one of the directions given to you to continue.")
 
 def StayInShop():
     if StoreVisited == "North":
