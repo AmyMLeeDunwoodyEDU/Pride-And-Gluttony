@@ -25,7 +25,7 @@ LesserHealingPotionPrice = 10
 LesserAntidotePrice = 8
 
 listOfLowLevelMonsters = ['Goblin', 'Goblin', 'Goblin', 'Goblin', 'Goblin', 'Goblin', 'Goblin', 'Goblin', 'Goblin', 'Goblin', 'Goblin', 'Goblin', 'Orc', 'Orc', 'Orc', 'Orc', 'Orc', 'Orc', 'Orc', 'Baby Dragon']
-listOfRandomOccurance = ['Walking', 'Walking', 'Walking', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'SavePoint']
+listOfRandomOccurance = ['Walking', 'Walking', 'Walking', 'Walking', 'Walking', 'Walking', 'Walking', 'Walking', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'Monster Encounter', 'SavePoint']
 armor = []
 weapon = []
 listOfItems = []
