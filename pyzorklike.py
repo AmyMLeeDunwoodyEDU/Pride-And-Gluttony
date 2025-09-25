@@ -1942,7 +1942,7 @@ def ironShortSword():
 
         if randomizedPlayerSpeed > trueMonsterSpeed:
             trueMonsterHP = trueMonsterHP - randomizedShortSwordDMG #Only does it once correctly
-            print("\nYou successfully slashed at the ")
+            print("\nYou successfully slashed with your Iron Shortsword at the ")
             print(trueMonsterEncountered)
             print("\nDamage done:")
             print(randomizedShortSwordDMG)
@@ -2107,7 +2107,7 @@ def woodenBow():
         
         if randomizedPlayerSpeed > trueMonsterSpeed:
             trueMonsterHP = trueMonsterHP - randomizedWoodenBowDMG #Only does it once correctly
-            print("\nYou successfully shot at the ")
+            print("\nYou successfully shot with your wooden bow at the ")
             print(trueMonsterEncountered)
             print("\nDamage done:")
             print(randomizedWoodenBowDMG)
@@ -2423,7 +2423,7 @@ def ironDagger():
 
         if randomizedPlayerSpeed > trueMonsterSpeed:
             trueMonsterHP = trueMonsterHP - randomizedDaggerDMG #Only does it once correctly
-            print("\nYou successfully slashed at the ")
+            print("\nYou successfully slashed with your Dagger at the ")
             print(MonsterEncountered)
             print("\nDamage done:")
             print(randomizedDaggerDMG)
