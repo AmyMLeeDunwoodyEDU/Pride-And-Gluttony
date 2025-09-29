@@ -2,8 +2,9 @@
 #creator to do for this program:
 
 #more important:
-#have Monster HP be only randomized once per battle, not once per turn lmfao
 #add in an invalid response function if the responses from the user were different than the options given.
+#make guarding actually work lmfao
+#have Monster HP be only randomized once per battle, not once per turn lmfao
 #add inventory space, where player can hold only 5 items without a backpack, and 10 items with the backpack.
 #make it so you can open up the guide in shops as well.
 #add in emotion levels (if the player wins more battles, player gets a higher chance of hitting critical attacks, if the player is felled during battle but their party lives, have a lower chance of landing critical attacks)
