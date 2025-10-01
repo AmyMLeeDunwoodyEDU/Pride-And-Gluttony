@@ -453,7 +453,7 @@ def arc1():
             GoNorth()
             StoreVisitedList.remove("None")
             StoreVisitedList.append("Blacksmith")
-        if GoToLocation.casefold() == "East".casefold() or GoToLocation.casefold() == "E".casefold() or GoToLocation.casefold() == "General Store".casefold() or GoToLocation.casefold() == "GS".casefold or GoToLocation.casefold() == "Right".casefold()():
+        if GoToLocation.casefold() == "East".casefold() or GoToLocation.casefold() == "E".casefold() or GoToLocation.casefold() == "General Store".casefold() or GoToLocation.casefold() == "GS".casefold or GoToLocation.casefold() == "Right".casefold():
              GoEast()
              StoreVisitedList.remove("None")
              StoreVisitedList.append("General Store")
