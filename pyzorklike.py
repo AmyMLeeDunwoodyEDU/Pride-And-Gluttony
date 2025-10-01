@@ -16,6 +16,7 @@
 #add in a magic system where only specific races can harness it
 #make it so it is heavily dependant on emotions and energy
 #make some magic, if its powerful, requires a sacrifice from the user, like HP
+#make this its own website as a challenge... heheheha
 
 #extra:
 #adding crit to every monster would be reaallly funny and evil but i would have to write 2 variations of the same move like i did with the player and i don't think ill be able to make that reasonably happen in a time crunch scenario like right now
