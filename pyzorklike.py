@@ -8,7 +8,7 @@
 #add inventory space, where player can hold only 5 items without a backpack, and 10 items with the backpack.
 #make it so you can open up the guide in shops as well.
 #add in emotion levels (if the player wins more battles, player gets a higher chance of hitting critical attacks, if the player is felled during battle but their party lives, have a lower chance of landing critical attacks)
-#pick a random day (1-10) to have a checkpoint village where player can buy better gear
+#pick a random day (1-10) to have a checkpoint village where player can buy better gear and meet new people
 #have a save system for every checkpoint village so its not completely rougelike lmfao
 #more difficult monsters to make up for the user getting better gear
 #add in potential and forced dungeon crawling, the player would have more action and movement choices, with better rewards as well but its going to be very difficult
@@ -19,7 +19,7 @@
 #make this its own website as a challenge... heheheha
 
 #extra:
-#adding crit to every monster would be reaallly funny and evil but i would have to write 2 variations of the same move like i did with the player and i don't think ill be able to make that reasonably happen in a time crunch scenario like right now
+#adding crit to every monster would be reaallly funny and evil but i would have to write 2 variations of the same move like i did with the player and i don't think ill be able to make that reasonably happen yet
 #adding in more interactions where the player can have a chance to encounter new people, do their first quest, to have them become the player's party member, the maximum you can have is 4 party members including the player
 #randomize their names and physical features but only once lmfao
 #have it so player can give gear to these new party members
@@ -263,14 +263,14 @@ def guideOfGame():
     print("Everything sentient in this game has stats. That also includes you. Here are your stats and what each of them mean.\n")
     
     if deaths == 0:
-        print("HP: Phyiscal Body Condition, if this reaches 0, it is game over.")
+        print("HP: Physical Body Condition, if this reaches 0, it is game over.")
         print("\nSpeed: How fast one is. This dictates the turn order in battle.")
         print("\nSkills: You technically have 2 skills, one regular attack to harm an enemy and one stronger attack.")
         print("\nDamage: Varies depending on your equipment. Every weapon has a base number and higher number. \nLike 1 through 10 for example. That's your regular damage, or DMG.")
         print("\nCritical Damage and Rate: Varies depending on your equipment. \nHas a higher base number and highest number. Like 15 through 20 for example. That's called Critical Damage, or CritDMG. \nHOWEVER, it has a percent chance to happen. That's called Critical Rate, or CritRate.")
     
     if deaths != 0:
-        print("HP: Phyiscal Body Condition, if this reaches 0, it is game over.")
+        print("HP: Physical Body Condition, if this reaches 0, it is game over.")
         print("\nSpeed: How fast one is. This dictates the turn order in battle, and the chances of you being able to flee from battle.")
         print("\nSkills: You technically have 2 skills, one regular attack to harm an enemy and one stronger attack. Some enemies will have more than 2.")
         print("\nDamage: Varies depending on your equipment. Every weapon has a base number and higher number. That's your regular damage, or DMG.")
@@ -455,15 +455,15 @@ def arc1():
             StoreVisitedList.remove("None")
             StoreVisitedList.append("Blacksmith")
         if GoToLocation.casefold() == "East".casefold() or GoToLocation.casefold() == "E".casefold() or GoToLocation.casefold() == "General Store".casefold() or GoToLocation.casefold() == "GS".casefold or GoToLocation.casefold() == "Right".casefold():
-             GoEast()
-             StoreVisitedList.remove("None")
-             StoreVisitedList.append("General Store")
+            GoEast()
+            StoreVisitedList.remove("None")
+            StoreVisitedList.append("General Store")
         if GoToLocation.casefold() == "South".casefold() or GoToLocation.casefold() == "S".casefold() or GoToLocation.casefold() == "Down".casefold():
-             GoSouth()
+            GoSouth()
         if GoToLocation.casefold() == "West".casefold() or GoToLocation.casefold() == "W".casefold() or GoToLocation.casefold() == "Potions Store".casefold() or GoToLocation.casefold() == "PS".casefold() or GoToLocation.casefold() == "Left".casefold():
-             GoWest()
-             StoreVisitedList.remove("None")
-             StoreVisitedList.append("Potions Store")
+            GoWest()
+            StoreVisitedList.remove("None")
+            StoreVisitedList.append("Potions Store")
         if GoToLocation.casefold() == "Unfold".casefold() or GoToLocation.casefold() == "Read".casefold() or GoToLocation.casefold() == "Open Paper".casefold() or GoToLocation.casefold() == "OP".casefold() or GoToLocation.casefold() == "R".casefold() or GoToLocation.casefold() == "U".casefold():
             guideOfGame()
         else:
@@ -908,7 +908,7 @@ def playerTurn():
 
     chanceOfBurn = range(0,100)
     randomizedChanceOfBurn = random.choice(chanceOfBurn)
- 
+
     if 'Burn' in AlimentList:
         if randomizedChanceOfBurn >= 51:
                 if yourHealthPoints > 0:
@@ -919,7 +919,7 @@ def playerTurn():
                     print("Damage Taken by Burn:")
                     print(burnDMGR)
                 if yourHealthPoints < 0:
-                    burntSelf = input("You burnt yourself into a chrisp. Game over.")
+                    burntSelf = input("You burnt yourself into a krisp. Game over.")
                     if burntSelf == "":
                         clear_Screen()
                         start_game()
