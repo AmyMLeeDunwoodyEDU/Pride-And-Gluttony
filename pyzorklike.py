@@ -65,10 +65,10 @@ backpack = []
 deaths = 0
 
 def clear_Screen():
-      os.system(
+    os.system(
             'cls' if os.name ==
             'nt' else 'clear'
-      )
+    )
 
 def start_game():
     import time
@@ -92,7 +92,7 @@ def start_game():
     
         time.sleep(3.5)
     
-        print("> Proof-read by Sunky (My Long Distance Boyfriend's Online Alias)")
+        print("> Proof-read by Sunky (My Boyfriend's Online Alias)")
     
         time.sleep(4.5)
     
@@ -125,7 +125,7 @@ def newGenstart_game():
     
     time.sleep(3.5)
     
-    print("> Proof-read by Sunky (My Long Distance Boyfriend's Online Alias)")
+    print("> Proof-read by Sunky (My Boyfriend's Online Alias)")
     
     time.sleep(4.8)
     
